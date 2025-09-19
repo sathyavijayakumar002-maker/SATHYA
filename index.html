@@ -1,0 +1,249 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8" />
+
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+  <title>Cyber Crime Portfolio — SATHYA</title>
+
+  <meta name="description" content="Portfolio showcasing cyber crime investigations, case studies, skills and contact." />
+
+  <link rel="stylesheet" href="styles.css" />
+
+</head>
+
+<body>
+
+  <header class="site-header">
+
+    <div class="container">
+
+      <h1 class="logo">CyberCrime<span>Portfolio</span></h1>
+
+      <nav aria-label="Primary">
+
+        <ul class="nav">
+
+          <li><a href="#about">About</a></li>
+
+          <li><a href="#cases">Cases</a></li>
+
+          <li><a href="#skills">Skills</a></li>
+
+          <li><a href="#contact">Contact</a></li>
+
+        </ul>
+
+      </nav>
+
+      <button id="menuToggle" class="menu-toggle" aria-expanded="false" aria-controls="nav">☰</button>
+
+    </div>
+
+  </header>
+
+  <main>
+
+    <section class="hero" id="home" aria-labelledby="hero-heading">
+
+      <div class="container hero-inner">
+
+        <h2 id="hero-heading">Investigating Digital Threats — Case Studies & Findings</h2>
+
+        <p class="lead">I investigate cybercrime incidents, do forensic analysis, and provide remediation guidance. Below are selected case studies and tools I use.</p>
+
+        <a class="btn" href="#cases">View Cases</a>
+
+      </div>
+
+    </section>
+
+    <section id="about" class="container about" aria-labelledby="about-heading">
+
+      <h3 id="about-heading">About Me</h3>
+
+      <div class="about-grid">
+
+        <div>
+
+          <p>I'm a cybercrime investigator focused on network forensics, malware analysis and incident response. I produce reproducible case reports and timelines for court-friendly evidence.</p>
+
+          <ul>
+
+            <li>Years active: 3+</li>
+
+            <li>Certifications: e.g., OSCP / CEH (example)</li>
+
+            <li>Preferred tools: Wireshark, Autopsy, Volatility, Splunk</li>
+
+          </ul>
+
+        </div>
+
+        <aside class="profile-card" aria-label="Summary">
+
+          <strong>Contact</strong>
+
+          <p>Email: <a href="mailto:example@example.com">example@example.com</a></p>
+
+          <p>Location: Chennai, India</p>
+
+        </aside>
+
+      </div>
+
+    </section>
+
+    <section id="cases" class="container cases" aria-labelledby="cases-heading">
+
+      <h3 id="cases-heading">Selected Cases</h3>
+
+      <div class="controls">
+
+        <label for="filter">Filter:</label>
+
+        <select id="filter" name="filter" aria-label="Filter cases">
+
+          <option value="all">All</option>
+
+          <option value="phishing">Phishing</option>
+
+          <option value="malware">Malware</option>
+
+          <option value="intrusion">Intrusion</option>
+
+          <option value="fraud">Fraud</option>
+
+        </select>
+
+        <input id="search" placeholder="Search by title or tag" aria-label="Search cases" />
+
+      </div>
+
+      <ul id="caseList" class="case-list" aria-live="polite">
+
+        <!-- populated via JS -->
+
+      </ul>
+
+    </section>
+
+    <section id="skills" class="container skills" aria-labelledby="skills-heading">
+
+      <h3 id="skills-heading">Skills & Tools</h3>
+
+      <div class="skills-grid">
+
+        <div class="skill">
+
+          <h4>Forensics</h4>
+
+          <p>Disk and memory analysis, timeline building, evidence preservation</p>
+
+        </div>
+
+        <div class="skill">
+
+          <h4>Network</h4>
+
+          <p>Packet analysis, IDS tuning, suspicious traffic hunting</p>
+
+        </div>
+
+        <div class="skill">
+
+          <h4>Malware</h4>
+
+          <p>Static/dynamic analysis, sandboxing, IOC extraction</p>
+
+        </div>
+
+        <div class="skill">
+
+          <h4>Reporting</h4>
+
+          <p>Readable, court-ready reports and slide decks</p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <section id="contact" class="container contact" aria-labelledby="contact-heading">
+
+      <h3 id="contact-heading">Contact</h3>
+
+      <form id="contactForm" novalidate>
+
+        <div class="form-row">
+
+          <label for="name">Name</label>
+
+          <input id="name" name="name" required />
+
+        </div>
+
+        <div class="form-row">
+
+          <label for="email">Email</label>
+
+          <input id="email" name="email" type="email" required />
+
+        </div>
+
+        <div class="form-row">
+
+          <label for="message">Message</label>
+
+          <textarea id="message" name="message" rows="6" required></textarea>
+
+        </div>
+
+        <div class="form-row">
+
+          <button type="submit" class="btn">Send</button>
+
+        </div>
+
+        <div id="formMessage" role="status" aria-live="polite"></div>
+
+      </form>
+
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+
+    <div class="container">
+
+      <small>© <span id="year"></span> Sathya — Cyber Crime Portfolio</small>
+
+    </div>
+
+  </footer>
+
+  <!-- Modal for case details -->
+
+  <div id="caseModal" class="modal" role="dialog" aria-modal="true" aria-hidden="true">
+
+    <div class="modal-content" role="document">
+
+      <button class="modal-close" aria-label="Close">✕</button>
+
+      <div id="modalBody"></div>
+
+    </div>
+
+  </div>
+
+  <script src="script.js" defer></script>
+
+</body>
+
+</html>
